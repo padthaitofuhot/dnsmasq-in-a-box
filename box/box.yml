@@ -1,6 +1,6 @@
 name: dnsmasq
 home: /opt/dnsmasq
-subdirs: tftp/pxelinux.cfg conf.d
+subdirs: tftp/pxelinux.cfg conf.d reservations.d
 conf: dnsmasq.conf
 
 conf:
@@ -13,7 +13,7 @@ conf:
   dhcp_range_start: 192.168.1.100
   dhcp_range_end: 192.168.1.199
   dhcp_range_netmask: 255.255.255.0
-  dhcp_lease_time: 12h
+  dhcp_lease_time: 1h
   default_gateway: 192.168.1.1
 # For servers, dnsmasq uses 0.0.0.0 to define itself
   dns_servers: 0.0.0.0
