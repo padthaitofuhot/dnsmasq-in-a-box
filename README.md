@@ -6,7 +6,7 @@ A [shipit](https://github.com/padthaitofuhot/shipit)-ized dnsmasq container for 
 # How?
 ```
 $ git clone https://github.com/padthaitofuhot/dnsmasq-in-a-box
-$ cd unbound-in-a-box
+$ cd dnsmasq-in-a-box
 $ sudo ./shipit.sh
 ```
 
