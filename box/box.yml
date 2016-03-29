@@ -1,0 +1,45 @@
+name: dnsmasq
+home: /opt/dnsmasq
+subdirs: tftp/pxelinux.cfg conf.d
+conf: dnsmasq.conf
+
+conf:
+# DNS Settings
+  port: 53
+  domain: local
+  dns_search: local
+  hosts_file: /opt/hosts
+# DHCP Settings
+  dhcp_range_start: 192.168.1.100
+  dhcp_range_end: 192.168.1.199
+  dhcp_range_netmask: 255.255.255.0
+  dhcp_lease_time: 12h
+  default_gateway: 192.168.1.1
+# For servers, dnsmasq uses 0.0.0.0 to define itself
+  dns_servers: 0.0.0.0
+# Assume unbound-in-a-box is running on the same IP as dnsmasq-in-a-box
+# and forward all queries to it.
+  no_resolv: no-resolv
+  no_poll: no-poll
+  forward_to: "server=127.0.0.1#5353"
+# Assume openntpd-in-a-box is running on the same IP as dnsmasq-in-a-box
+  ntp_server: 0.0.0.0
+
+build:
+  alpine_version: 3.3
+  alpine_mirror: http://dl-cdn.alpinelinux.org/alpine
+  packages: dnsmasq
+  volume: /opt
+  expose: 53 53/udp 67/udp 69/udp
+  entrypoint: /usr/sbin/dnsmasq -C/opt/dnsmasq.conf
+  cmd: -k --log-async --log-facility=-
+
+run:
+  console:
+  persist: -d
+  net: --net=host
+  capabilities: --cap-add NET_ADMIN
+  ports: "-p 0.0.0.0:53:53/tcp -p 0.0.0.0:53:53/udp -p 0.0.0.0:67:67/udp -p 0.0.0.0:69:69/udp"
+  volumes: "-v /opt/dnsmasq/ethers:/etc/ethers"
+  logging: --log-driver=syslog
+

@@ -1,0 +1,22 @@
+<filetype binary="false" description="DNSMasq Configuration" name="dnsmasq.conf">
+  <highlighting>
+    <options>
+      <option name="LINE_COMMENT" value="#" />
+      <option name="COMMENT_START" value="" />
+      <option name="COMMENT_END" value="" />
+      <option name="HEX_PREFIX" value=":" />
+      <option name="NUM_POSTFIXES" value="h; m; s; d; :" />
+      <option name="HAS_BRACES" value="true" />
+      <option name="HAS_BRACKETS" value="true" />
+      <option name="HAS_PARENS" value="true" />
+      <option name="LINE_COMMENT_AT_START" value="true" />
+    </options>
+    <keywords keywords="add-cpe-id;add-mac;add-subnet;addn-hosts;address;alias;all-servers;auth-peer;auth-sec-servers;auth-server;auth-soa;auth-ttl;auth-zone;bind-dynamic;bind-interfaces;bogus-nxdomain;bogus-priv;bootp-dynamic;bridge-interface;cache-size;clear-on-reload;cname;conf-dir;conf-file;conntrack;dhcp-alternate-port;dhcp-authoritative;dhcp-boot;dhcp-broadcast;dhcp-circuitid;dhcp-client-update;dhcp-duid;dhcp-fqdn;dhcp-generate-names;dhcp-host;dhcp-hostsdir;dhcp-hostsfile;dhcp-ignore;dhcp-ignore-names;dhcp-lease;dhcp-lease-max;dhcp-leasefile;dhcp-luascript;dhcp-mac;dhcp-match;dhcp-no-override;dhcp-option;dhcp-option-force;dhcp-optsdir;dhcp-optsfile;dhcp-prefix-class;dhcp-proxy;dhcp-range;dhcp-relay;dhcp-remoteid;dhcp-script;dhcp-scriptuser;dhcp-sequential-ip;dhcp-subscrid;dhcp-ttl;dhcp-userclass;dhcp-vendorclass;dns-forward-max;dns-loop-detect;dns-rr;dnssec;dnssec-check-unsigned;dnssec-debug;dnssec-no-timecheck;dnssec-timestamp;domain;domain-needed;domain-suffix;edns-packet-max;enable-dbus;enable-ra;enable-tftp;except-interface;expand-hosts;filterwin2k;group;help;host-record;hostsdir;ignore-address;interface;interface-name;ipset;keep-in-foreground;leasefile-ro;listen-address;local;local-service;local-ttl;localise-queries;localmx;log-async;log-dhcp;log-facility;log-queries;max-cache-ttl;max-port;max-ttl;min-cache-ttl;min-port;mx-host;mx-target;naptr-record;neg-ttl;no-daemon;no-dhcp-interface;no-hosts;no-negcache;no-ping;no-poll;no-resolv;pid-file;port;proxy-dnssec;ptr-record;pxe-prompt;pxe-service;query-port;quiet-dhcp;quiet-dhcp6;quiet-ra;ra-param;read-ethers;rebind-domain-ok;rebind-localhost-ok;resolv-file;rev-server;script-arp;selfmx;server;servers-file;srv-host;stop-dns-rebind;strict-order;synth-domain;tag-if;test;tftp-lowercase;tftp-max;tftp-mtu;tftp-no-blocksize;tftp-no-fail;tftp-port-range;tftp-root;tftp-secure;tftp-unique-root;trust-anchor;txt-record;user;version" ignore_case="false" />
+    <keywords2 keywords="=;id;ignore;known;option;option6;ra-names;ra-only;ra-stateless;set;slaac;static;tag" />
+    <keywords3 keywords="!;#;,;:;@;Etherboot;MSFT;PXEClient;gPXE;iPXE;x86PC" />
+    <keywords4 keywords="NIC;boothost;client-arch;dns-server;domain-search;information-refresh-time;ntp-server;router;vendor" />
+  </highlighting>
+  <extensionMap>
+    <mapping pattern="dnsmasq.conf" />
+  </extensionMap>
+</filetype>

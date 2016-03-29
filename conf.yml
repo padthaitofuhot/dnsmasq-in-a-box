@@ -1,0 +1,44 @@
+# Configuration options
+#
+# You can override anything you see in the "conf:" tree in box/box.yml here!
+# Additionally, there are a few properties you can set here that do not have
+# defaults in box.yml that you may find useful.
+#
+# NTP
+# It is assumed openntpd-in-a-box is running on the same IP as dnsmasq-in-a-box, but
+# if not, you can uncomment this to use 0.pool.ntp.org
+# ntp_server: 0.pool.ntp.org
+#
+# APK REPOS
+# Uncomment to use your favorite APK mirror
+# Only add the URL pointing the mirror root, everything else is added automatically!
+# For example, if you set the following:
+#alpine_mirror: http://192.168.1.2/alpine
+# it will resolve to:
+# http://192.168.1.2/alpine/v3.3/{main,community}
+# -AND-
+# http://192.168.1.2/alpine/edge/{main,community,testing}
+#
+# DNS SEARCH DOMAINS
+# Add search domains. Keep the leading comma or you'll get a parse error from dnsmasq. Sorry.
+# conf: domain: is included here, and is set to "local" by default or whatever you override it as
+# in this conf.yml file.
+# dns_search: ",emc.com"
+#
+# FORWARD SERVER
+# If you don't also have unbound-in-a-box running on the same host, you'll probably want to
+# uncomment and set the relevant lines below for your environment.
+# For example, if you want to reset to the default behavior of reading upstream DNS servers
+# from /etc/resolv.conf, uncomment all three lines.  If you want to specify a different
+# upstream DNS server than localhost, then uncomment the forward_to line, remove the '#', and
+# set the IP and port to match your upstream server.
+#no_resolv: "#no-resolv"
+#no_poll: "#no-poll"
+#forward_to: "#server=127.0.0.1#5353"
+#
+# DHCP RANGE
+#dhcp_range_start: 192.168.1.100
+#dhcp_range_end: 192.168.1.199
+#dhcp_range_netmask: 255.255.255.0
+#dhcp_lease_time: 12h
+#default_gateway: 192.168.1.1
