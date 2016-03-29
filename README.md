@@ -12,4 +12,4 @@ $ sudo ./shipit.sh
 
 # What's in the box?
 * DNSMasq DHCP and DNS
-* Plays nicely with unbound-in-a-box
+* Plays nicely with unbound-in-a-box, openntpd-in-a-box, and any other in-a-box containers.
