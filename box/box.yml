@@ -38,6 +38,7 @@ run:
   console:
   persist: -d
   net: --net=host
+  restart: --restart=always
   capabilities: --cap-add NET_ADMIN
   ports: "-p 0.0.0.0:53:53/tcp -p 0.0.0.0:53:53/udp -p 0.0.0.0:67:67/udp -p 0.0.0.0:69:69/udp"
   volumes: "-v /opt/dnsmasq/ethers:/etc/ethers"
