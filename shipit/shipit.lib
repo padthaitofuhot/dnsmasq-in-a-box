@@ -105,6 +105,30 @@ render_build_cmd() {
     fi
 }
 
+is_false() {
+    echo "${*}" | egrep -iq 'false|no'
+}
+
+is_true() {
+    echo "${*}" | egrep -iq 'true|yes'
+}
+
+render_comment_if_false() {
+    if ! [ -z "${1}" ]; then
+        if is_false "${1}"; then
+            echo "#"
+        fi
+    fi
+}
+
+render_comment_if_true() {
+    if ! [ -z "${1}" ]; then
+        if is_true "${1}"; then
+            echo "#"
+        fi
+    fi
+}
+
 #####
 # The wonderful YAY Yamlesque parser for bash by John Lane
 # @LICENSE: MIT refer-to https://github.com/johnlane/random-toolbox
