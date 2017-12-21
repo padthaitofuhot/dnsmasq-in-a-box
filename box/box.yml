@@ -42,4 +42,4 @@ run:
   capabilities: --cap-add NET_ADMIN
   ports: "-p 0.0.0.0:53:53/tcp -p 0.0.0.0:53:53/udp -p 0.0.0.0:67:67/udp -p 0.0.0.0:69:69/udp"
   volumes: "-v /opt/dnsmasq/ethers:/etc/ethers"
-  logging: --log-driver=syslog --log-opt=dnsmasq
+  logging: --log-driver=syslog --log-opt tag=dnsmasq
