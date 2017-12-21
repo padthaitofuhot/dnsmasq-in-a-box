@@ -10,6 +10,7 @@ conf:
   dns_search: local
   hosts_file: /opt/hosts
 # DHCP Settings
+  dhcp_enabled: true
   dhcp_range_start: 192.168.1.100
   dhcp_range_end: 192.168.1.199
   dhcp_range_netmask: 255.255.255.0
