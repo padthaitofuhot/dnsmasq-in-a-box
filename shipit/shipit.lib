@@ -74,9 +74,9 @@ render_alpine_mirror() {
     fi
     echo "${build_alpine_mirror}/v${build_alpine_version}/main" > box/repositories
     echo "${build_alpine_mirror}/v${build_alpine_version}/community" >> box/repositories
-    #echo "@edgemain ${conf_apk_repo}/edge/main" >> box/repositories
-    #echo "@edgecomm ${conf_apk_repo}/edge/community" >> box/repositories
-    #echo "@testing ${conf_apk_repo}/edge/testing" >> box/repositories
+    echo "@edge_main ${conf_apk_repo}/edge/main" >> box/repositories
+    echo "@edge_community ${conf_apk_repo}/edge/community" >> box/repositories
+    echo "@edge_testing ${conf_apk_repo}/edge/testing" >> box/repositories
     echo "COPY box/repositories /etc/apk/repositories"
 }
 
