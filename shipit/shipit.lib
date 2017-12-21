@@ -480,7 +480,7 @@ templater() {
     for var in $vars; do
         # magic to run a command to get a value
         if [ "${var#*render}" != "${var}" ]; then
-            value="$(${var})"
+            value="$($(echo ${var} | cut -d '='))"
         else
             value=`var_value $var`
             if [[ -z "$value" ]]; then
