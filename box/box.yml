@@ -27,7 +27,7 @@ conf:
   ntp_server: 0.0.0.0
 
 build:
-  alpine_version: 3.3
+  alpine_version: 3.6
   alpine_mirror: http://dl-cdn.alpinelinux.org/alpine
   packages: dnsmasq
   volume: /opt
